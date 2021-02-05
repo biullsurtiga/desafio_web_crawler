@@ -2,6 +2,10 @@
 
 echo -e  $(date +"%d-%m-%Y %H:%M:%S") " Iniciando execução de script"
 
+echo -e  $(date +"%d-%m-%Y %H:%M:%S") " Executando criação de tabelas noticias"
+#Criando Tabela
+python connect.py
+
 echo -e  $(date +"%d-%m-%Y %H:%M:%S") " Executando carga do Tecnoblog"
 #Tecnoblog
 scrapy runspider noticias/spiders/Tecnoblog.py
